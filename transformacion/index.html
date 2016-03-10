@@ -1,0 +1,72 @@
+<script language="JavaScript1.2" src="js/jquery-1.9.1.js"></script>
+<script language="JavaScript1.2" src="js/orderly_plugin.0.0.2.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+      <style type="text/css">
+
+            .contenedor{
+                margin:1%;
+                height: 200px;
+                min-height: 200px;
+                overflow: scroll;
+            }
+            .serie{
+                font-size: 20px; 
+                
+            }
+            .focused{
+               /* display: none;*/
+                
+            }
+            .season{
+                padding : 1%;
+            }
+            .chapter{
+                padding : 5%;
+            }
+            .visto{
+                color: red;
+            }
+            .extras{
+                color: gray;
+            }
+            span.visto{
+                color: orange;
+                text-align: left;
+            }
+            table, tr{
+                width: 100%;
+            }
+            td{
+                width: 33%;
+            }
+            table.tabla tr td{
+                 border: solid;
+                /*
+                height: 100px;
+                overflow: scroll;
+                */
+            }
+            #botonera span{
+                padding-right: 15px;
+            }
+        </style>  
+    </head>
+
+
+    <body>
+        <script type="text/javascript">
+            $(document).ready(function(){
+               orderly.informe_file = '../informe.xml';
+               orderly.n_columnas = 3;
+               orderly.onReady(); 
+            });
+        </script>
+        <div id="botonera">
+            <div><a id="btn_oculto">Ocultar vistos</a></div>
+        </div>
+        <div id="content">estamos en ello.....</div>
+    </body>
+
+</html>
