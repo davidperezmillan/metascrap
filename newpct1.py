@@ -9,8 +9,10 @@ from lxml import etree
 from commun import elemento
 from commun import informe
 
+from config.newpct1.logconfig import logger
+
 url = 'http://newpct1.com/peliculas'
-max = 50
+max = 5
 
 
 def build ():
@@ -26,7 +28,7 @@ def build ():
     #ficheros.writeFile(etree.tostring(root, pretty_print=True),"response/newpct1.html")
     result = root.xpath("//ul[re:test(@class,'pelilist')]/li",namespaces={'re': "http://exslt.org/regular-expressions"})
     
-    print "longitud del resultado ", len(result) 
+    logger.debug("longitud del resultado {0}".format(len(result))) 
     
     contador = 0
     for resul in result:
@@ -42,7 +44,7 @@ def build ():
         #print "longitud del resultado enlace", len(enlace) 
         
         link =  enlace[0].attrib['href'] if len(enlace) >= 1  else None
-        print "--",name , "--> ",link
+        logger.info("-- %s --> %s" % (name,link))
         item.nombre = name;
         
         
@@ -56,7 +58,7 @@ def build ():
         
         #print "longitud del resultado enlaceDown", len(enlaceDown)
         linkDown =  enlaceDown[0].attrib['href'] if len(enlace) >= 1  else None
-        print "linkDown",linkDown, fecha
+        logger.debug("linkDown %s, %s" %(linkDown, fecha))
         item.fecha = fecha
         
         ## Segunda pagina de descarga
@@ -68,7 +70,7 @@ def build ():
 
         #print "longitud del resultado enlaceDown", len(enlaceDown)
         linkDown_2 =  enlaceDown_2[0].attrib['href'] if len(enlace) >= 1  else None
-        print "linkDown2",linkDown_2
+        logger.debug("linkDown2 %s" %(linkDown_2))
         item.descarga = linkDown_2
         #ficheros.download(linkDown_2, "response/")
         item.origen = "newpct1"

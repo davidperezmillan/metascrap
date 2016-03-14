@@ -8,7 +8,7 @@ BASE_URL = "http://www.pordede.com"
 LOGIN_URL = "http://www.pordede.com/site/login"
 URL = "http://www.pordede.com/series/following"
 
-file_log = "log/log_file.log"
+file_log = "log/pordede/log_file.log"
 namelog = "pordede_log"
 
 file_informe = 'informe.xml'
