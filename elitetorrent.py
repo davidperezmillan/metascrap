@@ -16,9 +16,9 @@ from config.elitetorrent.logconfig import logger
 
 urlfindnew = ["http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado", 
     "http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado"]
-max = 5
+max = 25
 
-def build():
+def build(max=max):
     
     lista = []
     

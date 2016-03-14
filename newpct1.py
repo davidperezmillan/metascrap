@@ -12,10 +12,10 @@ from commun import informe
 from config.newpct1.logconfig import logger
 
 url = 'http://newpct1.com/peliculas'
-max = 5
+max = 50
 
 
-def build ():
+def build (max=max):
     
     lista = []
     
