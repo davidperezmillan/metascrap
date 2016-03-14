@@ -36,17 +36,24 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 ''' 
 
+
+
+
 handler = logging.StreamHandler()
 handler.setLevel(logging.DEBUG)
-formatter = logging.Formatter("%(levelname)s - %(message)s")
+#formatter = logging.Formatter("%(levelname)s - %(message)s")
+formatter = logging.Formatter(fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s',datefmt='%y-%m-%d %H:%M:%S')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-
+'''
 handler = logging.handlers.RotatingFileHandler(filename=config.file_log, mode='a', maxBytes=10240, backupCount=5)
 handler.setLevel(logging.INFO)
 formatter = logging.Formatter(fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s',datefmt='%y-%m-%d %H:%M:%S')
 handler.setFormatter(formatter)    
 logger.addHandler(handler)
+'''
+
+
 
 # Añadimos mensajes al fichero de log
 #logger.debug('message debug')

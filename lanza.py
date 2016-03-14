@@ -6,11 +6,11 @@ import elitetorrent
 from commun import informe
 from config.logconfig import logger
 
-max = 5
+max = 10
 path =None
 
 if __name__ == '__main__':
     lista = []
-    lista.extend(newpct1.build(max, path))
     lista.extend(elitetorrent.build(max, path))
+    lista.extend(newpct1.build(max, path))
     informe.buildXML(lista)

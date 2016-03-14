@@ -51,7 +51,7 @@ def build(max=max, path=None):
                     
                     ficheros.download(archivoDescargar,path) if path else None
                     
-                    item.origen = "elitetorrent"
+                    item.origen = item.origen("elitetorrent",url)
                     listaparcial.append(item)
                 contador = contador + 1
         lista.extend(listaparcial)

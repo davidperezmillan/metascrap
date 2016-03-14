@@ -8,6 +8,7 @@ import elemento
 
 doc = "root"
 registro = "reg"
+fecharef = "fecha"
 item = "item"
 fecha = "fecha"
 nombre = "nombre"
@@ -36,10 +37,12 @@ path = "xmls/informe.xml"
 
 
 def buildXML(lista):
-    x = datetime.datetime.now()
     docElement = etree.Element(doc)
+    fecha = etree.Element(fecharef)
+    fecha.text = today()
+    docElement.append(fecha)
     reg = etree.Element(registro)
-    reg.text = today()
+    reg.text = str(len(lista))
     docElement.append(reg)
     for elemento in lista:
         docElement.append(additem(elemento))
@@ -51,7 +54,7 @@ def additem(elemento):
     element.append(addsubitem(fecha,elemento.fecha.strip()))
     element.append(addsubitem(nombre,elemento.nombre.strip()))
     element.append(addsubitem(descarga,elemento.descarga))
-    element.append(addsubitem(origen,elemento.origen.strip()))
+    element.append(addorigenelement(origen,elemento))
     return element
 
 
@@ -59,6 +62,17 @@ def addsubitem(subitem, value):
     element = etree.Element(subitem)
     element.text = value
     return element
+
+def addorigenelement(subitem,value):
+    element = etree.Element(subitem)
+    oName = etree.Element("web")
+    oName.text = value.origen.nombre
+    element.append(oName)
+    oEnlace = etree.Element("enlace")
+    oEnlace.text = value.origen.enlace
+    element.append(oEnlace)
+    return element
+
 
 def grabarFichero(texto):
     try:

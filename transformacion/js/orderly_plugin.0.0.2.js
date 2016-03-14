@@ -38,7 +38,11 @@ var orderly = (function(){
                 nombre: $(this).find("nombre").text().trim(),
                 fecha:$(this).find("fecha").text().trim(),
                 descarga: $(this).find("descarga").text().trim(),
-                origen : $(this).find("origen").text().trim(),
+                origen : {
+                    web: $(this).find("origen").find("web").text().trim(),
+                    enlace: $(this).find("origen").find("enlace").text().trim(),
+                    },
+                
                 };
             data.items.push(item);
         });
@@ -69,14 +73,15 @@ var orderly = (function(){
         var td = $('<td></td>');
         var divitem = $('<div></div>').addClass('item');
 		var enlace = $('<a></a>').attr("href", item.descarga).text(item.nombre);
-		var origenHtml = $('<div></div>').addClass('origen').text(item.origen);
-		
+		var origenHtml = $('<div></div>').addClass('origen');
+		var eOrigen = $('<a></a>').addClass('origen').text(item.origen.web).attr("href", item.origen.enlace);
+		origenHtml.append(eOrigen);
 		
 		divitem.append(enlace);
 		td.append(origenHtml);
 		td.append(divitem);
 		return td;
-    }
+    };
     
     
 	/* DEPRECATE */

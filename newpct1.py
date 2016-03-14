@@ -72,7 +72,7 @@ def build (max=max, path=None):
 
         ficheros.download(linkDown_2,path) if path else None
         
-        item.origen = "newpct1"
+        item.origen = item.origen("newpct1",url)
         lista.append(item)
         
         contador = contador + 1
