@@ -15,7 +15,7 @@ from commun import informe
 
 urlfindnew = ["http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado", 
     "http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado"]
-max = 10
+max = 50
 
 def build():
     

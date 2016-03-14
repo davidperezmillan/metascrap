@@ -51,6 +51,11 @@
             #botonera span{
                 padding-right: 15px;
             }
+			div.origen{
+				font-size: 50%;
+				padding: 5px;
+				text-align: right;
+			}
         </style>  
     </head>
 
@@ -58,15 +63,13 @@
     <body>
         <script type="text/javascript">
             $(document).ready(function(){
-               orderly.informe_file = '../informe.xml';
+               orderly.informe_file = '../xmls/informe.xml';
                orderly.n_columnas = 3;
                orderly.onReady(); 
             });
         </script>
-        <div id="botonera">
-            <div><a id="btn_oculto">Ocultar vistos</a></div>
-        </div>
-        <div id="content">estamos en ello.....</div>
+        <div id="botonera"></div>
+        <div id="content">Cargando datos del Servidor</div>
     </body>
 
 </html>

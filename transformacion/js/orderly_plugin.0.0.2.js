@@ -1,6 +1,6 @@
 var orderly = (function(){
   
-    var data = {inicio :"",a : [],fin :""};
+    var data = {reg :"",items : []};
     
     /*
     [{
@@ -31,57 +31,58 @@ var orderly = (function(){
     };
     
     var xmlParser =  function(xml) {
-        data.inicio = $(xml).find('inicio').text().trim();
-        data.fin = $(xml).find('fin').text().trim();
-        $(xml).find('serie').each(function(){
+        data.reg = $(xml).find('reg').text().trim();
+        $(xml).find('item').each(function(){
             //console.log($(this).attr('name').trim());
-            var serie = {
-                name: $(this).attr(orderly.serie_name).trim(),
-                season :[]
+            var item = {
+                nombre: $(this).find("nombre").text().trim(),
+                fecha:$(this).find("fecha").text().trim(),
+                descarga: $(this).find("descarga").text().trim(),
+                origen : $(this).find("origen").text().trim(),
                 };
-            $(this).find('season').each(function(){
-                //console.log($(this).attr('name').trim());
-                var season = {
-                    name: $(this).attr(orderly.season_name).trim(),
-                    chapter: []
-                };
-                $(this).find('chapter').each(function(){
-                    //console.log($(this).attr('name').trim());
-                    //console.log($(this).find('id').text().trim());
-                    //console.log($(this).find('id').text().trim());
-                    var chapter = {
-                        id : $(this).find(orderly.chapter_id).text().trim(),
-                        name:$(this).find(orderly.chapter_name).text().trim(),
-                        status:$(this).attr(orderly.chapter_status).trim()
-                    };
-                    season.chapter.push(chapter);
-                 });
-                 serie.season.push(season);
-            });
-            data.a.push(serie);
+            data.items.push(item);
         });
+        //console.dir(data);
         buildTable();
     };
 		    
 
     var buildTable = function(){
-        $('#botonera').append($('<span>').text('Inicio = ' + data.inicio));
-        $('#botonera').append($('<span>').text('Fin = ' + data.fin));
-        var arr = data.a;
+        $('#botonera').append($('<span>').text('Registro de actividad :' + data.reg));
+        var arr = data.items;
         var tabla = $('<table></table>').addClass('tabla');
-        var tr;
+        var tr = $('<tr></tr>');
         for ( var i = 0; i < arr.length; i++ ) {
             if (i%orderly.n_columnas==0){
-                tabla.append(buildCabecera());
-                tr = $('<tr></tr>');
+                //tabla.append(buildCabecera());
+				tr = $('<tr></tr>');
+                
             }
-            tr.append(buildSerie(arr[i])); 
+            tr.append(builditem(arr[i])); 
             tabla.append(tr);
         }
         $('#content').text('');
         $('#content').append(tabla);
     };
     
+    var builditem = function(item){
+        var td = $('<td></td>');
+        var divitem = $('<div></div>').addClass('item');
+		var enlace = $('<a></a>').attr("href", item.descarga).text(item.nombre);
+		var origenHtml = $('<div></div>').addClass('origen').text(item.origen);
+		
+		
+		divitem.append(enlace);
+		td.append(origenHtml);
+		td.append(divitem);
+		return td;
+    }
+    
+    
+	/* DEPRECATE */
+	/*
+	
+	
     var buildCabecera = function(){
         var tr = $('<tr></tr>');
         for (var i = orderly.n_columnas; i--; ) {
@@ -93,7 +94,7 @@ var orderly = (function(){
     
     var buildSerie = function(serie){
         var td = $('<td></td>');
-        var divserie = $('<div></div>').addClass('serie').text(serie.name);
+        var divserie = $('<div></div>').addClass('serie').text(item);
         var divcontenedor =  $('<div></div>').addClass('contenedor').toggleClass("focused");
         for (var s in serie.season) {
             var season =serie.season[s];
@@ -124,17 +125,12 @@ var orderly = (function(){
         return td;
     };
     
-    
+    */
     
   // PUBLICA
 var orderly = {
-    informe_file : 'informe.xml',
+    informe_file : '../xmls/informe.xml',
     n_columnas : 3,
-    serie_name : 'name',
-    season_name : 'name',
-    chapter_name : 'name',
-    chapter_id : 'id',
-    chapter_status : 'status',
     
  	// inicializamos el objeto
     onReady : function() {

@@ -10,7 +10,7 @@ from commun import elemento
 from commun import informe
 
 url = 'http://newpct1.com/peliculas'
-max = 10
+max = 50
 
 
 def build ():

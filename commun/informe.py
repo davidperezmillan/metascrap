@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import datetime
 from lxml import etree
 import elemento
 
 
 doc = "root"
+registro = "reg"
 item = "item"
 fecha = "fecha"
 nombre = "nombre"
@@ -24,8 +26,21 @@ path = "xmls/informe.xml"
 </root>
 '''
 
+
+
+
+
+
+
+
+
+
 def buildXML(lista):
+    x = datetime.datetime.now()
     docElement = etree.Element(doc)
+    reg = etree.Element(registro)
+    reg.text = today()
+    docElement.append(reg)
     for elemento in lista:
         docElement.append(additem(elemento))
     grabarFichero(etree.tostring(docElement, pretty_print=True));
@@ -54,6 +69,13 @@ def grabarFichero(texto):
     except Exception, ex:
         print "[ERROR]", ex
 
+
+def today():
+    x = datetime.datetime.now()
+    return ("%s" % x)
+    #return ("%s/%s/%s::%s:%s:%s" % (x.day, x.month, x.year,x.hour, x.month, x.second) )
+        
+    
 '''
 if __name__ == '__main__':
     
