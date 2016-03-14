@@ -37,7 +37,8 @@ logger.addHandler(handler)
 
 handler = logging.StreamHandler()
 handler.setLevel(logging.WARN)
-formatter = logging.Formatter("%(levelname)s - %(message)s")
+#formatter = logging.Formatter("%(levelname)s - %(message)s")
+formatter = logging.Formatter(fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s',datefmt='%y-%m-%d %H:%M:%S')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 

@@ -5,7 +5,7 @@ import requests
 from lxml import html
 from lxml import etree
 
-#from commun import ficheros
+from commun import ficheros
 from commun import elemento
 from commun import informe
 
@@ -15,15 +15,11 @@ url = 'http://newpct1.com/peliculas'
 max = 50
 
 
-def build (max=max):
+def build (max=max, path=None):
+    
+    logger.info("URL %s"%(url))
     
     lista = []
-    
-    '''
-    enlace = result.xpath("a[re:test(@href, '^/torrent')]",
-    namespaces={'re': "http://exslt.org/regular-expressions"})
-    '''
-
     root = html.parse(url).getroot()
     #ficheros.writeFile(etree.tostring(root, pretty_print=True),"response/newpct1.html")
     result = root.xpath("//ul[re:test(@class,'pelilist')]/li",namespaces={'re': "http://exslt.org/regular-expressions"})
@@ -70,9 +66,12 @@ def build (max=max):
 
         #print "longitud del resultado enlaceDown", len(enlaceDown)
         linkDown_2 =  enlaceDown_2[0].attrib['href'] if len(enlace) >= 1  else None
+        
         logger.debug("linkDown2 %s" %(linkDown_2))
         item.descarga = linkDown_2
-        #ficheros.download(linkDown_2, "response/")
+
+        ficheros.download(linkDown_2,path) if path else None
+        
         item.origen = "newpct1"
         lista.append(item)
         
