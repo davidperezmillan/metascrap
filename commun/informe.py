@@ -8,13 +8,13 @@ import elemento
 
 doc = "root"
 registro = "reg"
-fecharef = "fecha"
+fecharef = "fecharef"
 item = "item"
 fecha = "fecha"
 nombre = "nombre"
 descarga = "descarga"
 origen = "origen"
-path = "xmls/informe.xml"
+basepath = "xmls/informe.xml"
 
 '''
 <root>
@@ -27,16 +27,7 @@ path = "xmls/informe.xml"
 </root>
 '''
 
-
-
-
-
-
-
-
-
-
-def buildXML(lista):
+def buildXML(lista, path = basepath):
     docElement = etree.Element(doc)
     fecha = etree.Element(fecharef)
     fecha.text = today()
@@ -46,7 +37,7 @@ def buildXML(lista):
     docElement.append(reg)
     for elemento in lista:
         docElement.append(additem(elemento))
-    grabarFichero(etree.tostring(docElement, pretty_print=True));
+    grabarFichero(etree.tostring(docElement, pretty_print=True), path);
     
     
 def additem(elemento):
@@ -74,7 +65,7 @@ def addorigenelement(subitem,value):
     return element
 
 
-def grabarFichero(texto):
+def grabarFichero(texto, path):
     try:
         myXMLfile = open(path, 'w')
         myXMLfile.write(texto)

@@ -8,7 +8,7 @@ import os.path
 
 from urlparse import urlsplit
 
-
+debug = None
 
 def url2name(url):
     return  os.path.basename(urlsplit(url)[2])
@@ -36,8 +36,9 @@ def download(url, path, localFileName = None):
         print "El fichero {0} existe".format(localName)
 
 def writeFile(texto, namefile):
-    file = open(namefile, "w")
-    file.write(texto)
-    file.close()
+    if (debug):
+        file = open(namefile, "w")
+        file.write(texto)
+        file.close()
     
 

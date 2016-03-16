@@ -1,8 +1,44 @@
 <root>
-  <fecha>2016-03-14 10:53:17.317043</fecha>
+  <fecharef>2016-03-16 15:33:26.471680</fecharef>
   <reg>28</reg>
   <item>
-    <fecha>Hace 4 hrs</fecha>
+    <fecha>Hace 6 hrs</fecha>
+    <nombre>Ocho apellidos catalanes (microHD)</nombre>
+    <descarga>http://elitetorrent.net/get-torrent/31137</descarga>
+    <origen>
+      <web>elitetorrent</web>
+      <enlace>http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>Hace 6 hrs</fecha>
+    <nombre>Bone Tomahawk (microHD)</nombre>
+    <descarga>http://elitetorrent.net/get-torrent/31135</descarga>
+    <origen>
+      <web>elitetorrent</web>
+      <enlace>http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>Hace un d&#237;a</fecha>
+    <nombre>Grandma (microHD)</nombre>
+    <descarga>http://elitetorrent.net/get-torrent/31124</descarga>
+    <origen>
+      <web>elitetorrent</web>
+      <enlace>http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>Hace un d&#237;a</fecha>
+    <nombre>Territorio Grizzly (microHD)</nombre>
+    <descarga>http://elitetorrent.net/get-torrent/31108</descarga>
+    <origen>
+      <web>elitetorrent</web>
+      <enlace>http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>Hace 2 d&#237;as</fecha>
     <nombre>El &#250;ltimo tour (microHD)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31103</descarga>
     <origen>
@@ -11,7 +47,7 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 18 hrs</fecha>
+    <fecha>Hace 2 d&#237;as</fecha>
     <nombre>El asesinato de un gato (microHD)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31097</descarga>
     <origen>
@@ -20,7 +56,7 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 18 hrs</fecha>
+    <fecha>Hace 2 d&#237;as</fecha>
     <nombre>Mirabilis (microHD)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31095</descarga>
     <origen>
@@ -29,7 +65,7 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 18 hrs</fecha>
+    <fecha>Hace 2 d&#237;as</fecha>
     <nombre>Mand&#237;bulas letales (microHD)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31093</descarga>
     <origen>
@@ -38,7 +74,7 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 2 d&#237;as</fecha>
+    <fecha>Hace 4 d&#237;as</fecha>
     <nombre>Mark &amp; Russell's wild ride (microHD)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31083</descarga>
     <origen>
@@ -47,43 +83,43 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 2 d&#237;as</fecha>
-    <nombre>El clan (microHD)</nombre>
-    <descarga>http://elitetorrent.net/get-torrent/31081</descarga>
+    <fecha>Hace 6 hrs</fecha>
+    <nombre>Ocho apellidos catalanes (HDRip)</nombre>
+    <descarga>http://elitetorrent.net/get-torrent/31136</descarga>
     <origen>
       <web>elitetorrent</web>
-      <enlace>http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado</enlace>
+      <enlace>http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>Hace 6 hrs</fecha>
+    <nombre>Bone Tomahawk (HDRip)</nombre>
+    <descarga>http://elitetorrent.net/get-torrent/31134</descarga>
+    <origen>
+      <web>elitetorrent</web>
+      <enlace>http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>Hace un d&#237;a</fecha>
+    <nombre>Grandma (HDRip)</nombre>
+    <descarga>http://elitetorrent.net/get-torrent/31123</descarga>
+    <origen>
+      <web>elitetorrent</web>
+      <enlace>http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>Hace un d&#237;a</fecha>
+    <nombre>Territorio Grizzly (HDRip)</nombre>
+    <descarga>http://elitetorrent.net/get-torrent/31107</descarga>
+    <origen>
+      <web>elitetorrent</web>
+      <enlace>http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado</enlace>
     </origen>
   </item>
   <item>
     <fecha>Hace 2 d&#237;as</fecha>
-    <nombre>Stormageddon: Apocal&#237;psis infernal (microHD)</nombre>
-    <descarga>http://elitetorrent.net/get-torrent/31079</descarga>
-    <origen>
-      <web>elitetorrent</web>
-      <enlace>http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>Hace 2 d&#237;as</fecha>
-    <nombre>Monster high: The great scarrier reef (microHD)</nombre>
-    <descarga>http://elitetorrent.net/get-torrent/31076</descarga>
-    <origen>
-      <web>elitetorrent</web>
-      <enlace>http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>Hace 2 d&#237;as</fecha>
-    <nombre>Blue mountain state: The rise of Thadland (microHD)</nombre>
-    <descarga>http://elitetorrent.net/get-torrent/31063</descarga>
-    <origen>
-      <web>elitetorrent</web>
-      <enlace>http://elitetorrent.net/categoria/17/peliculas-microhd/modo:listado</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>Hace 4 hrs</fecha>
     <nombre>El &#250;ltimo tour (HDRip)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31102</descarga>
     <origen>
@@ -92,7 +128,7 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 18 hrs</fecha>
+    <fecha>Hace 2 d&#237;as</fecha>
     <nombre>El asesinato de un gato (HDRip)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31096</descarga>
     <origen>
@@ -101,7 +137,7 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 18 hrs</fecha>
+    <fecha>Hace 2 d&#237;as</fecha>
     <nombre>Mirabilis (HDRip)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31094</descarga>
     <origen>
@@ -110,7 +146,7 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 18 hrs</fecha>
+    <fecha>Hace 2 d&#237;as</fecha>
     <nombre>Mand&#237;bulas letales (HDRip)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31092</descarga>
     <origen>
@@ -119,7 +155,7 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 2 d&#237;as</fecha>
+    <fecha>Hace 4 d&#237;as</fecha>
     <nombre>Mark &amp; Russell's wild ride (HDRip)</nombre>
     <descarga>http://elitetorrent.net/get-torrent/31082</descarga>
     <origen>
@@ -128,39 +164,66 @@
     </origen>
   </item>
   <item>
-    <fecha>Hace 2 d&#237;as</fecha>
-    <nombre>El clan (HDRip)</nombre>
-    <descarga>http://elitetorrent.net/get-torrent/31080</descarga>
+    <fecha>16-03-2016</fecha>
+    <nombre>Bone Tomahawk</nombre>
+    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1458123528_bone-tomahawk--blurayrip-ac3-51/</descarga>
     <origen>
-      <web>elitetorrent</web>
-      <enlace>http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado</enlace>
+      <web>newpct1</web>
+      <enlace>http://newpct1.com/peliculas</enlace>
     </origen>
   </item>
   <item>
-    <fecha>Hace 2 d&#237;as</fecha>
-    <nombre>Stormageddon: Apocal&#237;psis infernal (HDRip)</nombre>
-    <descarga>http://elitetorrent.net/get-torrent/31078</descarga>
+    <fecha>15-03-2016</fecha>
+    <nombre>Ocho Apellidos Catalanes</nombre>
+    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1458079136_ocho-apellidos-catalanes--blurayrip-ac3-51/</descarga>
     <origen>
-      <web>elitetorrent</web>
-      <enlace>http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado</enlace>
+      <web>newpct1</web>
+      <enlace>http://newpct1.com/peliculas</enlace>
     </origen>
   </item>
   <item>
-    <fecha>Hace 2 d&#237;as</fecha>
-    <nombre>Monster high: The great scarrier reef (HDRip)</nombre>
-    <descarga>http://elitetorrent.net/get-torrent/31075</descarga>
+    <fecha>15-03-2016</fecha>
+    <nombre>Territorio Grizzly 2014</nombre>
+    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1458071041_territorio-grizzly-2014--blurayrip/</descarga>
     <origen>
-      <web>elitetorrent</web>
-      <enlace>http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado</enlace>
+      <web>newpct1</web>
+      <enlace>http://newpct1.com/peliculas</enlace>
     </origen>
   </item>
   <item>
-    <fecha>Hace 2 d&#237;as</fecha>
-    <nombre>Blue mountain state: The rise of Thadland (HDRip)</nombre>
-    <descarga>http://elitetorrent.net/get-torrent/31062</descarga>
+    <fecha>15-03-2016</fecha>
+    <nombre>Grandma 2015</nombre>
+    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1458070709_grandma-2015--blurayrip/</descarga>
     <origen>
-      <web>elitetorrent</web>
-      <enlace>http://elitetorrent.net/categoria/13/peliculas-hdrip/modo:listado</enlace>
+      <web>newpct1</web>
+      <enlace>http://newpct1.com/peliculas</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>15-03-2016</fecha>
+    <nombre>El Ultimo Tour 2015</nombre>
+    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1458070607_el-ultimo-tour-2015--blurayrip/</descarga>
+    <origen>
+      <web>newpct1</web>
+      <enlace>http://newpct1.com/peliculas</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>15-03-2016</fecha>
+    <nombre>Grandma</nombre>
+    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1458046678_grandma--blurayrip/</descarga>
+    <origen>
+      <web>newpct1</web>
+      <enlace>http://newpct1.com/peliculas</enlace>
+    </origen>
+  </item>
+  <item>
+    <fecha>14-03-2016</fecha>
+    <nombre>Territorio Grizzly</nombre>
+    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457981400_territorio-grizzly--blurayrip/</descarga>
+    <origen>
+      <web>newpct1</web>
+      <enlace>http://newpct1.com/peliculas</enlace>
     </origen>
   </item>
   <item>
@@ -185,69 +248,6 @@
     <fecha>13-03-2016</fecha>
     <nombre>Mirabilis 2015</nombre>
     <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457901810_mirabilis-2015--blurayrip/</descarga>
-    <origen>
-      <web>newpct1</web>
-      <enlace>http://newpct1.com/peliculas</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>13-03-2016</fecha>
-    <nombre>Mandibulas Letales 2015</nombre>
-    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457901586_mandibulas-letales-2015--blurayrip/</descarga>
-    <origen>
-      <web>newpct1</web>
-      <enlace>http://newpct1.com/peliculas</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>13-03-2016</fecha>
-    <nombre>El Asesinato De Un Gato 2014</nombre>
-    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457901396_el-asesinato-de-un-gato-2014--blurayrip/</descarga>
-    <origen>
-      <web>newpct1</web>
-      <enlace>http://newpct1.com/peliculas</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>13-03-2016</fecha>
-    <nombre>Mand&#237;bulas Letales</nombre>
-    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457886740_mandbulas-letales--blurayrip/</descarga>
-    <origen>
-      <web>newpct1</web>
-      <enlace>http://newpct1.com/peliculas</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>13-03-2016</fecha>
-    <nombre>Mirabilis</nombre>
-    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457886583_mirabilis--blurayrip/</descarga>
-    <origen>
-      <web>newpct1</web>
-      <enlace>http://newpct1.com/peliculas</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>13-03-2016</fecha>
-    <nombre>El Asesinato De Un Gato</nombre>
-    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457870878_el-asesinato-de-un-gato--blurayrip-ac3-51/</descarga>
-    <origen>
-      <web>newpct1</web>
-      <enlace>http://newpct1.com/peliculas</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>12-03-2016</fecha>
-    <nombre>Stormageddon Apocalipsis Infer..</nombre>
-    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457820994_stormageddon-apocalipsis-infernal-2016--blurayrip/</descarga>
-    <origen>
-      <web>newpct1</web>
-      <enlace>http://newpct1.com/peliculas</enlace>
-    </origen>
-  </item>
-  <item>
-    <fecha>12-03-2016</fecha>
-    <nombre>Monster High Un Viaje La Mar D..</nombre>
-    <descarga>http://tumejorjuego.com/descargar/index.php?link=descargar-torrent/1457820811_monster-high-un-viaje-la-mar-de-monstruoso-2016--blurayrip/</descarga>
     <origen>
       <web>newpct1</web>
       <enlace>http://newpct1.com/peliculas</enlace>

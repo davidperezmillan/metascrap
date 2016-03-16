@@ -1,6 +1,6 @@
 var orderly = (function(){
   
-    var data = {reg :"",items : []};
+    var data = {reg :"", fecha : "",items : []};
     
     /*
     [{
@@ -32,6 +32,7 @@ var orderly = (function(){
     
     var xmlParser =  function(xml) {
         data.reg = $(xml).find('reg').text().trim();
+        data.fecha = $(xml).find('fecharef').text().trim();
         $(xml).find('item').each(function(){
             //console.log($(this).attr('name').trim());
             var item = {
@@ -53,6 +54,7 @@ var orderly = (function(){
 
     var buildTable = function(){
         $('#botonera').append($('<span>').text('Registro de actividad :' + data.reg));
+        $('#botonera').append($('<span>').text('fecha de actividad :' + data.fecha));
         var arr = data.items;
         var tabla = $('<table></table>').addClass('tabla');
         var tr = $('<tr></tr>');
@@ -72,7 +74,9 @@ var orderly = (function(){
     var builditem = function(item){
         var td = $('<td></td>');
         var divitem = $('<div></div>').addClass('item');
-		var enlace = $('<a></a>').attr("href", item.descarga).text(item.nombre);
+		var enlace = $('<div></div>').addClass('btnCall').attr("href","javascript:console.log('Enviando')");
+		var eEnlace = $('<a></a>').attr("href", item.descarga).text(item.nombre);
+		enlace.append(eEnlace);
 		var origenHtml = $('<div></div>').addClass('origen');
 		var eOrigen = $('<a></a>').addClass('origen').text(item.origen.web).attr("href", item.origen.enlace);
 		origenHtml.append(eOrigen);
@@ -82,6 +86,26 @@ var orderly = (function(){
 		td.append(divitem);
 		return td;
     };
+    
+	var download = function(link, path)  {
+			//Vamos a llamar al proccess 
+			//para que nos de la version de la pagina que pedimos
+			$.ajax({
+			   url:"proccess.php",
+			   type:'POST',
+			   data : {"url" : link, "path" : path},
+			   // ,timeout: 3000 // añadir timeout????
+			})
+			.done(function( data, textStatus, jqXHR ) {
+                console.log("Ok");
+			})
+			.fail(function(jqXHR, textStatus, errorThrown){
+                console.log("FAIL");
+			})
+			.then(function( jqXHR, textStatus, errorThrown){
+				// span.appendTo($('#endpointStatus'));
+			});
+};
     
     
 	/* DEPRECATE */
@@ -134,7 +158,7 @@ var orderly = (function(){
     
   // PUBLICA
 var orderly = {
-    informe_file : '../xmls/informe.xml',
+    informe_file : '',
     n_columnas : 3,
     
  	// inicializamos el objeto
@@ -144,7 +168,9 @@ var orderly = {
     	llamadaAjax();
     	
 
+    	
 	}
+	
 };
 return orderly; 
 
