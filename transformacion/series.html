@@ -1,0 +1,83 @@
+<script language="JavaScript1.2" src="js/jquery-2.1.4.js"></script>
+<script language="JavaScript1.2" src="js/orderly_series_plugin.0.0.3.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        div#content span.reg{
+            font-size: 75%;
+        }
+        
+        .contenedor{
+                margin:1%;
+                height: 200px;
+                min-height: 200px;
+                overflow: scroll;
+            }
+            .serie{
+                font-size: 20px; 
+                
+            }
+            .focused{
+                display: none;
+                
+            }
+            .season{
+                padding : 1%;
+            }
+            .chapter{
+                padding : 5%;
+            }
+            .visto{
+                color: red;
+            }
+            .extras{
+                color: gray;
+            }
+            span.visto{
+                color: orange;
+                text-align: left;
+            }
+            table, tr{
+                width: 100%;
+            }
+            td{
+                width: 33%;
+            }
+            .tabla tr td{
+                 border: solid;
+                /*
+                height: 100px;
+                overflow: scroll;
+                */
+            }
+            #botonera span{
+                padding-right: 15px;
+            }
+        
+        </style>  
+         <script type="text/javascript">
+            $(document).ready(function(){
+                orderly.informe_file = '../xmls/informe_series.xml';
+                orderly.n_columnas = 1;
+                orderly.onReady(); 
+            });
+        </script>
+    </head>
+
+
+    <body>
+        <div id="botonera">
+            <select id="combo" >
+                <option value="">Seleccionar ...</option>
+            </select>
+            <input type="text" id="find"/>
+            <input type="button" id="btnFind"/>
+        </div>
+        <div id="search">
+            
+        </div>
+        <div id="content">Cargando datos del Servidor</div>
+    </body>
+
+</html>
