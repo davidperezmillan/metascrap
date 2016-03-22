@@ -118,6 +118,7 @@ var orderly = (function(){
             tabla.append(tr);
         }
         $('#content').text('');
+        $('#content').append($("<span></span>").addClass("reg").text(data.inicio));
         $('#content').append(tabla);
     };
     
