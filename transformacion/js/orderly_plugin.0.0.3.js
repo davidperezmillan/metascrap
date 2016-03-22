@@ -45,8 +45,10 @@ var orderly = (function(){
     };
     
     var xmlParser =  function(xml) {
+        data = {inicio :"",serie : [],fin :""};
         data.inicio = $(xml).find('inicio').text().trim();
         data.fin = $(xml).find('fin').text().trim();
+        $("#reg").addClass("reg").text(data.inicio);
         $(xml).find('serie').each(function(){
             //console.log($(this).attr('name').trim());
             var serie = {
@@ -106,6 +108,7 @@ var orderly = (function(){
 
 
     var buildTable = function(finddata){
+        $('#content').text('');
         var arr = finddata.serie;
         var tabla = $('<table></table>').addClass('tabla');
         var tr;
@@ -117,8 +120,6 @@ var orderly = (function(){
             tr.append(buildSerie(arr[i])); 
             tabla.append(tr);
         }
-        $('#content').text('');
-        $('#content').append($("<span></span>").addClass("reg").text(data.inicio));
         $('#content').append(tabla);
     };
     
@@ -189,6 +190,9 @@ var orderly = {
         $("#combo").on("change", function(){
             if ( $("#combo").val() || false)
                 find();
+        });
+        $("#btnreg").on("click", function(){
+            llamadaAjax();
         });
 	}
 	
