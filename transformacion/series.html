@@ -1,5 +1,5 @@
-<script language="JavaScript1.2" src="js/jquery-2.1.4.js"></script>
-<script language="JavaScript1.2" src="js/orderly_series_plugin.0.0.3.js"></script>
+<script language="JavaScript1.2" src="js/jquery-1.9.1.js"></script>
+<script language="JavaScript1.2" src="js/orderly_plugin.0.0.3.js"></script>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +10,7 @@
         
         .contenedor{
                 margin:1%;
-                height: 200px;
+                height: 50%;
                 min-height: 200px;
                 overflow: scroll;
             }
@@ -58,8 +58,8 @@
         </style>  
          <script type="text/javascript">
             $(document).ready(function(){
-                orderly.informe_file = '../xmls/informe_series.xml';
-                orderly.n_columnas = 1;
+                orderly.informe_file = 'informe.xml';
+                orderly.n_columnas = 2;
                 orderly.onReady(); 
             });
         </script>

@@ -27,6 +27,7 @@ var orderly = (function(){
 		});
 		req.done(function (xml){
 		    xmlParser(xml);
+            buildTable();
 		});
     };
     
@@ -48,7 +49,6 @@ var orderly = (function(){
             data.items.push(item);
         });
         //console.dir(data);
-        buildTable();
     };
 		    
 
@@ -102,10 +102,10 @@ var orderly = (function(){
 			.fail(function(jqXHR, textStatus, errorThrown){
                 console.log("FAIL");
 			})
-			.then(function( jqXHR, textStatus, errorThrown){
+			.then(function( data, textStatus, jqXHR ){
 				// span.appendTo($('#endpointStatus'));
 			});
-};
+    };
     
     
 	/* DEPRECATE */
