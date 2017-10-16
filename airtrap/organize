@@ -1,0 +1,121 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import sys, os, re
+import shutil
+import logging
+from logging.handlers import RotatingFileHandler
+import argparse
+import conf.constantes as cons
+
+basepathlog = cons.basepathlog
+loggername = 'organize'
+defaulformatter = "%(asctime)s [%(levelname)s] - %(name)s - %(filename)s:%(lineno)d - %(message)s"
+loggerfilename = basepathlog+loggername+'.log'
+
+
+def buildlogger(args):
+    global logger
+    logger = logging.getLogger(loggername)
+    logger.setLevel(logging.getLevelName(args.loglevel.upper()))
+    formatter = logging.Formatter(defaulformatter)
+    
+    # handler = logging.FileHandler(mcbconstants.basepathlog+"mycrylog.out")
+    handler = RotatingFileHandler(args.logfile, maxBytes=20000, backupCount=5)
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    
+    ch = logging.StreamHandler()
+    ch.setFormatter(formatter)        
+    logger.addHandler(ch)
+    return logger
+
+
+
+
+
+
+class Organize(object):
+    
+    def proccess(self,url):
+        self.__ls(url)
+    
+    
+    def __move(self,archivo, path):
+        self.logger.info("{0}: ficheros a mover a {1}".format(archivo, path))
+        shutil.copy(archivo, path+'/..')
+    
+    
+    
+    def __ls(self,path="."):
+        self.logger.info ("ls {0}".format(path))
+        try:
+            for root, dirnames, filenames in os.walk(path):
+                self.logger.debug(root)
+                self.logger.debug(dirnames)
+                self.logger.debug(filenames)
+                # for filename in filenames:
+                    
+                #     fname = os.path.basename(os.path.join(root, filename))
+                #     onedir = os.path.join(os.path.basename(os.path.dirname(os.path.join(root, filename))))
+                #     if re.match('Session', onedir): # matches
+                #         self.logger.debug ("{0} esta en su sitio : {1}".format(fname,onedir))
+                #     else:
+                #         self.logger.info ("{0} hay que moverlo : {1}".format(filename, root))
+                #         self.__move(os.path.join(root, filename), root)
+                
+                dname = os.path.join(os.path.basename(os.path.dirname(os.path.join(root))))
+                self.logger.info("directorio : {0}".format(dname))
+                if re.match('Session', dname): # matches
+                    self.logger.debug ("No hay que borrarlo")
+                else:
+                    self.logger.info ("Se borra")
+                      
+        except Exception,e:
+             self.logger.error(e)
+
+    ## Constructor
+    def __init__(self, logger= None):
+        
+        if (logger):
+            self.logger = logger
+        else:
+            self.logger = logging.getLogger(loggername)
+            self.logger.setLevel(logging.DEBUG)
+            self.formatter = logging.Formatter(defaulformatter)
+        
+            self.handler = RotatingFileHandler(loggerfilename, maxBytes=2000, backupCount=3)
+            self.handler.setFormatter(self.formatter)
+            self.logger.addHandler(self.handler)
+            
+            self.ch = logging.StreamHandler()
+            self.ch.setFormatter(self.formatter)        
+            self.logger.addHandler(self.ch)
+
+
+
+def proccesArgs():
+    parser = argparse.ArgumentParser(add_help=True)
+    parser.add_argument('url',  nargs='?', default='all', help='Define la operacion a realizar')
+
+    parser.add_argument("-v", "--verbose", help="Mostrar información de depuración", action="store_true")
+    parser.add_argument("-t", "--test", help="No ser realizaran acciones [modo test]", action='store_true', default=False)
+    parser.add_argument("--cron", help="Se define los parametros para ser lanzado", action="store_true")
+    # parser.add_argument("-c", "--config", help="Definimos archivo de configuracion", default="config/config.json")
+    parser.add_argument("--loglevel", help="Definimos el nivel de logs", default="DEBUG", choices=['DEBUG','debug','INFO','info','WARN', 'warn','ERROR', 'error'])
+    parser.add_argument("--logfile", help="Definimos archivo de log", default=loggerfilename)
+    
+    parser.add_argument('--version', action='version', version='%(prog)s 1.0')
+    args = parser.parse_args()
+    return args
+
+
+
+
+if __name__ == '__main__':
+   
+    args=proccesArgs()
+    logger=buildlogger(args)
+    logger.debug("Argumentos pasados %s",args)
+    
+    organize = Organize(logger)
+    organize.proccess('/home/ubuntu/workspace/sandbox.3')
