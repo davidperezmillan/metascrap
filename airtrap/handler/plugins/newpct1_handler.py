@@ -122,9 +122,18 @@ class Newpct1HandlerClass(object):
         '''
         source = BeautifulSoup(page, "html.parser")
         buscar_list = source.find_all("ul", {"class" : "buscar-list"})
-        enlace = buscar_list[0].find_all("a") or None
-        if enlace:
-            self.url=enlace[0]["href"] or None
+        
+        enlaces = buscar_list[0].find_all("a") or None
+        if enlaces:
+            enlace = enlaces[0]
+            for bl_enlace in enlaces:
+                valor = bl_enlace['title']
+                pattern = ".*{0} - Temporada".format(titulo)
+                self.logger.debug("Comprobamos en '{0}' para {1} ".format(valor, pattern))
+                if re.match(pattern,valor):
+                    self.logger.debug("encontrado")
+                    enlace = bl_enlace
+            self.url=enlace["href"] or None
             self.logger.debug("Hemos encontrado la url %s", self.url)
             return True
         else:
